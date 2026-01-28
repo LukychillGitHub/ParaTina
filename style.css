@@ -1,53 +1,96 @@
-* {
-    margin: 0;
-    padding: 0;
-    background-color: bisque;
+/* Reset básico sin romper fondos */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    gap: 20px;
+/* Fondo en body (no en *) */
+body{
+  background-color: bisque;
+  min-height: 100dvh;
+  user-select: none;
+  touch-action: manipulation;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
 }
 
-body {
-    position: relative;
-    overflow: hidden; /* opcional, para que no se escape del viewport */
-    user-select: none;
-    touch-action: manipulation;
+/* Main centrado y con padding para celular */
+main{
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 18px;
+  text-align: center;
 }
 
-.buttons-container {
-    display: flex;
-    gap: 20px; /* Espacio entre los botones */
-    margin-top: 10px;
+/* Imagen/GIF responsive */
+main img{
+  width: min(260px, 80vw);
+  height: auto;
+  display: block;
 }
 
+/* Textos que escalan bien en mobile */
+h2{
+  font-size: clamp(1.1rem, 4.5vw, 1.6rem);
+  line-height: 1.2;
+}
+
+p{
+  font-size: clamp(0.9rem, 3.5vw, 1rem);
+  opacity: 0.9;
+}
+
+/* Botones: en mobile uno debajo del otro; en pantallas más grandes, en fila */
+.buttons-container{
+  width: 100%;
+  max-width: 420px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 6px;
+}
 
 .buttons{
-    width: 100px;
-    height: 45px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 16px;
-    letter-spacing: 1px;
-    color: #000;
-    background-color: #fff;
-    border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
-    max-width: 90vw; /* se adapta en pantallas chicas */
+  width: 100%;
+  height: 48px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.buttons:hover{
+/* Hover solo donde realmente existe hover */
+@media (hover: hover){
+  .buttons:hover{
     background-color: #c5844f;
     box-shadow: 0px 15px 20px rgba(229, 150, 46, 0.4);
     color: #fff;
-    transform: translateY(-5px);
+    transform: translateY(-3px);
   }
+}
+
+/* Feedback en touch */
+.buttons:active{
+  transform: scale(0.98);
+}
+
+/* En pantallas un poco más grandes, dos botones al lado */
+@media (min-width: 420px){
+  .buttons-container{
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
