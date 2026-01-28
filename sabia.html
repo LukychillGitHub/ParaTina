@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Aceptaste el trato!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #8f4914, #e9a873);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      animation: pop 1s ease;
+    }
+
+    p {
+      font-size: 1.5rem;
+      max-width: 600px;
+      margin-bottom: 30px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @keyframes pop {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .heart {
+      font-size: 4rem;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .btn-back {
+        font: bold;
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      background-color: white;
+      color: #eec89c;
+      border-radius: 25px;
+      font-size: 1rem;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+    }
+
+    .btn-back:hover {
+        background-color: #c5844f;
+        box-shadow: 0px 15px 20px rgba(229, 150, 46, 0.4);
+        color: #fff;
+        transform: translateY(-5px);
+    }
+
+    img {
+        width: 150px;
+
+    }
+  </style>
+</head>
+<body>
+    <img src="jake1.gif" alt="jake2">
+  <h1>¡Estas condenada a recibir regalos y sorpresas de la nada! </h1>
+  <p>Yo que vos me voy acostumbrando, porque soy muy creativo. El peluche es solo el inicio de lo que aceptaste muejeje // 
+    Saluditos Atte: Yo lu
+  </p>
+
+  <button class="btn-back" onclick="goBack()">Volver</button>
+
+  <script>
+    function goBack() {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
