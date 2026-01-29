@@ -3,104 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>¡Aceptaste el trato!</title>
+  <title>Plan cerrado 😌</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      margin: 0;
-      padding: 20px 20px 20px 20px;
-      background: linear-gradient(135deg, #8f4914, #e9a873);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      height: 100vh;
-      color: #fff;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 3rem;
+    body{ padding:18px; }
+    .card{ width:min(620px, 92vw); }
+    h1{
+      font-size: clamp(1.6rem, 6vw, 2.4rem);
       margin-bottom: 10px;
-      animation: pop 1s ease;
     }
-
-    p {
-      font-size: 1.5rem;
-      max-width: 600px;
-      margin-bottom: 30px;
-      padding-left: 20px;
-      padding-right: 20px;
+    .note{
+      color: rgba(255,255,255,0.82);
+      font-size: 1.05rem;
+      line-height: 1.45;
+      margin: 10px auto 14px;
+      max-width: 52ch;
     }
-
-    @keyframes pop {
-      0% {
-        transform: scale(0.8);
-        opacity: 0;
-      }
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
+    .list{
+      display:grid;
+      gap:8px;
+      margin: 10px auto 16px;
+      max-width: 52ch;
+      text-align:left;
     }
-
-    .heart {
-      font-size: 4rem;
-      animation: pulse 1.5s infinite;
+    .item{
+      padding:10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.06);
     }
-
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.2);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-
-    .btn-back {
-        font: bold;
-      margin-top: 0px;
-      padding: 10px 20px;
-      border: none;
-      background-color: white;
-      color: #eec89c;
-      border-radius: 25px;
-      font-size: 1rem;
-      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-      cursor: pointer;
-      transition: 0.3s ease-in-out;
-    }
-
-    .btn-back:hover {
-        background-color: #c5844f;
-        box-shadow: 0px 15px 20px rgba(229, 150, 46, 0.4);
-        color: #fff;
-        transform: translateY(-5px);
-    }
-
-    img {
-        width: 150px;
-
+    .btn-back{
+      width: min(320px, 100%);
+      margin: 8px auto 0;
+      display:block;
     }
   </style>
 </head>
 <body>
-    <img src="jake1.gif" alt="jake2">
-  <h1>¡Estas condenada a recibir regalos y sorpresas de la nada! </h1>
-  <p>Yo que vos me voy acostumbrando, porque soy muy creativo. El peluche es solo el inicio de lo que aceptaste muejeje // 
-    Saluditos Atte: Yo Lu
-  </p>
+  <main class="card">
+    <img class="gif" src="jake1.gif" alt="jake" />
 
-  <button class="btn-back" onclick="goBack()">Volver</button>
+    <h1>Perfecto. Quedaste oficialmente invitada 🏡✨</h1>
+    <p class="note">
+      Yo pongo el mood y los snacks. Vos traé tu presencia y esa vibra linda.
+      Si querés, elegí:
+    </p>
 
-  <script>
-    function goBack() {
-      window.location.href = "index.html";
-    }
-  </script>
+    <div class="list">
+      <div class="item">🍿 Opción A: peli + algo rico</div>
+      <div class="item">🎧 Opción B: música chill + charla</div>
+      <div class="item">🍦 Opción C: postre + mini paseo cerca (si pinta)</div>
+    </div>
+
+    <p class="tiny">Atte: Lu</p>
+
+    <button class="buttons btn-back" onclick="window.location.href='index.html'">Volver</button>
+  </main>
 </body>
 </html>
