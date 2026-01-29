@@ -9,7 +9,7 @@
     body{ padding:18px; }
     .card{ width:min(620px, 92vw); }
     h1{
-      font-size: clamp(1.6rem, 6vw, 2.4rem);
+      font-size: clamp(1.4rem, 6vw, 2.4rem);
       margin-bottom: 10px;
     }
     .note{
@@ -23,8 +23,8 @@
       display:grid;
       gap:8px;
       margin: 10px auto 16px;
-      max-width: 52ch;
-      text-align:left;
+      max-width: 28ch;
+      text-align:center;
     }
     .item{
       padding:10px 12px;
@@ -40,22 +40,24 @@
   </style>
 </head>
 <body>
-  <main class="card">
-    <img class="gif" src="jake1.gif" alt="jake" />
+  <div class="bg-orbs" aria-hidden="true"></div>
 
-    <h1>Perfecto. Quedaste oficialmente invitada 🏡✨</h1>
+  <main class="card">
+    <img class="gif" src="Sticker.jpg" alt="sticker" />
+
+    <h1>Perfecto! Sabia que te ibas a querer juntar conmigo jeje 🏡✨</h1>
     <p class="note">
-      Yo pongo el mood y los snacks. Vos traé tu presencia y esa vibra linda.
-      Si querés, elegí:
+      Yo te hago reir y te miro bonito.<br> Vos traé tu vibra y esa sonrisa linda.
+      <br>Pasos:
     </p>
 
     <div class="list">
-      <div class="item">🍿 Opción A: peli + algo rico</div>
-      <div class="item">🎧 Opción B: música chill + charla</div>
-      <div class="item">🍦 Opción C: postre + mini paseo cerca (si pinta)</div>
+      <div class="item">1️⃣ Elegimos un dia</div>
+      <div class="item">2️⃣ Organizamos la comida fit</div>
+      <div class="item">3️⃣ Disfrutamos juntitos!</div>
     </div>
 
-    <p class="tiny">Atte: Lu</p>
+    <p class="tiny">Atte: Lu ❤️ <br>Decime si sume puntos, yo creo que si 🫦</p>
 
     <button class="buttons btn-back" onclick="window.location.href='index.html'">Volver</button>
   </main>
