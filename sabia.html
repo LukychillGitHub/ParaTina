@@ -59,6 +59,35 @@
 
     <p class="tiny">Atte: Lu ❤️ (osea yo jiji) <br>Decime si sume puntitos, yo creo que si 🫦</p>
 
+    <button class="buttons btn-back" id="acceptBtn">
+  Acepto la invitación 😌
+</button>
+
+<div class="final" id="finalCard" hidden>
+  <h2>✨ Confirmado entonces! ✨</h2>
+  <p>
+    Me quedo esperando tu día ideal...<br>
+    Prometo seguir haciendote reir para poder alagarte tu sonrisita 🏡<br>
+    Yo te dije que era una caja de sorpresas, y las que pueden llegar a quedar...<br> Mua Mua 😘 Kisses Kisses
+  </p>
+</div>
+
   </main>
+
+  <script>
+  const btn = document.getElementById("acceptBtn");
+  const finalCard = document.getElementById("finalCard");
+
+  btn.addEventListener("click", () => {
+    btn.style.opacity = "0";
+    btn.style.pointerEvents = "none";
+
+    setTimeout(() => {
+      btn.remove();
+      finalCard.hidden = false;
+    }, 280);
+  });
+</script>
+
 </body>
 </html>
